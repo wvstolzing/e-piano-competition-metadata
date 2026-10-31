@@ -114,4 +114,5 @@ array of composers:
         standard file name at the chelate1118/piano-e-competition-midi-files repo
         processed file name at the chelate1118/piano-e-competition-midi-files repo
 ```
-        
+
+The sqlite3 database also has a fts index which tokenizes entries by trigrams; this should make it possible to search by partial, misspelled, etc. composer or work titles, if this database were to become part of some interface to help feed selected MIDI files to a player like Pianoteq.
