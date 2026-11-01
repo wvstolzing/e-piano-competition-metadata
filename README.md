@@ -9,13 +9,13 @@ I shall describe the steps I followed to construct `yamaha_competition.json` and
 
 To gather the relevant metadata I scraped the relevant pages from the archive.org snapshots of the now offline competition website, using the following wget command:
 
-```
+``` bash
 wget --recursive --no-clobber --page-requisites --html-extension --convert-links  https://web.archive.org/web/20201001220519/https://yamahaden.com/midi-files
 ```
 
 Fortunately the HTML was easy to parse using lxml, so I used the following python script to do that:
 
-```
+``` python
 from lxml import html
 from pathlib import Path
 from xxhash import xxh3_64_hexdigest
